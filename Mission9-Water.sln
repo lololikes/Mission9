@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33214.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mission9-Water", "Mission9-Water\Mission9-Water.csproj", "{642D165A-663A-401D-9AA1-7AB4DB3F7B97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{642D165A-663A-401D-9AA1-7AB4DB3F7B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642D165A-663A-401D-9AA1-7AB4DB3F7B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642D165A-663A-401D-9AA1-7AB4DB3F7B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642D165A-663A-401D-9AA1-7AB4DB3F7B97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6A9E58D-3E72-4704-975E-814D7197D370}
+	EndGlobalSection
+EndGlobal

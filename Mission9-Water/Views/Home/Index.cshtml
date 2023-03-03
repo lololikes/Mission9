@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.calc = 20 / 10;
+}
+@model BooksViewModel
+
+<h1>The Book Store</h1>
+
+<link href="/lib/css/bootstrap.css" rel="stylesheet" />
+@foreach (Book b in Model.Books)
+{
+<div class="container">
+    <h3>@b.Title</h3>
+    <ul class="myUL">
+        <li>Author: @b.Author</li>
+        <li>Publisher: @b.Publisher</li>
+        <li>ISBN: @b.Isbn</li>
+        <li>Category: @b.Category</li>
+        <li>Number of Pages: @b.PageCount</li>
+        <li>Price: $@b.Price</li>
+    </ul>
+</div>
+}
+
+<div class='container' page-blah="@Model.PageInfo" page-action="Index"></div>
+
+
