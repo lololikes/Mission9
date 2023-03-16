@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Mission9_Water.Models
         //first part declares second part instantiates 
         public List<CartLineItem> Items { get; set; } = new List<CartLineItem>();
 
-        public void AddItem(Book book, int qty)
+        public virtual void AddItem(Book book, int qty)
         {
             CartLineItem line = Items
                 .Where(b => b.Book.BookId == book.BookId)
@@ -28,6 +29,16 @@ namespace Mission9_Water.Models
                 line.Quantity += qty;
             }
         }
+        public virtual void RemoveItem(Book book)
+        {
+            Items.RemoveAll(x => x.Book.BookId == book.BookId);
+        }
+
+        public virtual void ClearCart()
+        {
+            Items.Clear();
+        }
+
         public double CalculateTotal()
         {
             double sum = Items.Sum(x => x.Quantity * x.Book.Price);
@@ -39,6 +50,7 @@ namespace Mission9_Water.Models
 
     public class CartLineItem
     {
+        [Key]
         public int LineId { get; set; }
         public Book Book { get; set; }
         public int Quantity { get; set; }
